@@ -7,14 +7,14 @@ const main = () => {
     throw new Error('Failed to get properties.');
   }
 
-  const text = "Today's Tasklist";
   const tasks = getTasks();
+  const text = `Today's Tasks (${tasks.length}件)`;
   const blocks = [
     {
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: "*Today's Tasklist*",
+        text: `*${text}*`,
       },
     },
     { type: 'divider' },
